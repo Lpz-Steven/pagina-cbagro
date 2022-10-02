@@ -1,0 +1,664 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html{
+    box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}
+body {
+  font-family: Helvetica;
+}
+.contenedor {
+  padding: 60px 0;
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+}
+
+header {
+  width: 100%;
+  min-height: 100vh;
+  background: #ff6a00cc; /* fallback for old browsers */
+  background-image: linear-gradient(120deg, #ff6a00cc 0%, #fd9f8524 50%),
+    url(../img/header.jpg); /* Chrome 10-25, Safari 5.1-6 */
+  background-image: linear-gradient(120deg, #ff6a00cc 0%, #fd9f8524 50%),
+    url(../img/header.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  position: relative;
+}
+nav {
+  text-align: right;
+  padding: 30px 50px 0 0;
+}
+
+nav > a {
+  display: none;
+  color: #ffff;
+  font-weight: 300;
+  text-decoration: none;
+  margin-right: 10px;
+}
+nav > a:hover {
+  text-decoration: underline;
+}
+
+@media(min-width: 768px){
+  nav > a {
+    display: inline-block;
+    color: #ffff;
+    font-weight: 300;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+  nav > a:hover {
+    text-decoration: underline;
+  }
+}
+
+.logo_sena{
+  width: 100px;
+  margin-left: 20px;
+  margin-top: -25px;
+}
+.textos-header {
+  height: 430px;
+  width: 100%;
+  text-align: right;
+  margin-top: 20vh;
+}
+
+.textos-header h1 {
+  font-size: 50px;
+  color: #ffff;
+  margin-right: 50px;
+}
+.textos-header h2 {
+  font-size: 30px;
+  font-weight: 200;
+  color: #ffff;
+  margin-right: 50px;
+}
+.wave {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.logo_agro{
+  width: 320px;
+  height: 220px;
+}
+/*main*/
+.container {
+  margin: 20px 20px;
+}
+.section1 {
+  display: flex;
+  justify-content: space-around;
+}
+.section_item {
+  background-color: #ffffff;
+  height: 200px;
+  width: 250px;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 4px 2px 10px 5px rgba(0, 0, 0, 0.2);
+}
+.section2 {
+  display: flex;
+  height: 55vh;
+  width: 100%;
+  margin-top: 120px;
+  background-color: #ff6c00;
+}
+.section_ubicacion {
+  background-image: linear-gradient(120deg, #ff6a00cc 0%, #fd9f8524 50%),
+    url(../IMG/imagen2.jpg); /* Chrome 10-25, Safari 5.1-6 */
+  background-image: linear-gradient(120deg, #ff6a00cc 0%, #fd9f8524 50%),
+    url(../IMG/imagen2.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-size: cover;
+  background-position: center center;
+  height: 55vh;
+  width: 50%;
+}
+.mapa {
+  margin: 20px auto;
+  width: 45%;
+  height: 90%;
+}
+
+/*grid 1*/
+
+.section3 {
+  margin-top: 120px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4,1fr);
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  height: 160vh;
+}
+/*ganaderia*/
+.contenedor_1{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  grid-column: 1/3;
+}
+.image{
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center center;
+}
+.image_1{
+  background-image: url(../img/vacas.jpg);
+}
+.overlay{
+  position: absolute;
+  transition: all .2s ease;
+  opacity: 0;
+  background-color: #ff6c00;
+}
+.contenedor_1:hover .overlay{
+  opacity: .9;
+}
+.text{
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+}
+.overlay_left{
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.contenedor_1:hover .overlay_left{
+  width: 100%;
+}
+
+
+/*apicultura*/
+.contenedor_2{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  grid-column: 3/4;
+  grid-row: 1/3;
+}
+.image_2{
+  background-image: url("../img/apicultura.jpg");
+}
+.overlay_2{
+  position: absolute;
+  transition: all .3s ease;
+  opacity: 0;
+  background-color: #ff6c00;
+}
+.contenedor_2:hover .overlay_2{
+  opacity: .9;
+}
+.overlay_left_2{
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.contenedor_1:hover .overlay_left_2{
+  width: 100%;
+}
+/*conejos*/
+.contenedor_3{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  
+}
+.image_3{
+  background-image: url("../img/conejos.jpg");
+  background-position: top center;
+}
+.overlay_3{
+  position: absolute;
+  transition: all .3s ease;
+  opacity: 0;
+  background-color: #ff6c00;
+}
+.contenedor_3:hover .overlay_3{
+  opacity: .9;
+}
+.overlay_left_3{
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.contenedor_3:hover .overlay_left_3{
+  width: 100%;
+}
+
+/*gallinas*/
+.contenedor_4{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  
+}
+.image_4{
+  background-image: url("../img/gallinas.jpg");
+  background-position: top center;
+}
+.overlay_4{
+  position: absolute;
+  transition: all .3s ease;
+  opacity: 0;
+  background-color: #ff6c00;
+}
+.contenedor_4:hover .overlay_4{
+  opacity: .9;
+}
+.overlay_left_4{
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.contenedor_4:hover .overlay_left_4{
+  width: 100%;
+}
+
+/*ovinocultura*/
+.contenedor_item5{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  grid-column: 1/4;
+  
+}
+.texto{
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+} 
+
+.image_item5{
+  background-image: url("../img/cabra.jpg");
+  background-position: top top;
+}
+.overlay_item5{
+  position: absolute;
+  transition: all .3s ease;
+  opacity: 0;
+  background-color: #ff6c00;
+}
+.contenedor_item5:hover .overlay_item5{
+  opacity: .9;
+}
+.overlay_left_item5{
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.contenedor_item5:hover .overlay_left_item5{
+  width: 100%;
+}
+
+
+
+/*grid 2*/
+.section4 {
+  margin-top: -100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4,1fr);
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  height: 140vh;
+}
+.item {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+/*cocteleria*/
+.contenedor_5{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  grid-row: 1/3;
+}
+.image_5{
+  background-image: url("../img/cocteleria.jpg");
+  background-position: top center;
+}
+.overlay_5{
+  position: absolute;
+  transition: all .3s ease;
+  opacity: 0;
+  background-color: #ff6c00;
+}
+.contenedor_5:hover .overlay_5{
+  opacity: .9;
+}
+.overlay_left_5{
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.contenedor_5:hover .overlay_left_5{
+  width: 100%;
+}
+
+/*reposteria*/
+.contenedor_6{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  grid-row: 1/2;
+  grid-column: 2/4;
+}
+.image_6{
+  background-image: url("../img/pasteleria.jpg");
+  background-position: center center;
+}
+.overlay_6{
+  position: absolute;
+  transition: all .3s ease;
+  opacity: 0;
+  background-color: #ff6c00;
+}
+.contenedor_6:hover .overlay_6{
+  opacity: .9;
+}
+.overlay_left_6{
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.contenedor_6:hover .overlay_left_6{
+  width: 100%;
+}
+
+/*biotecnologia*/
+.contenedor_7{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  
+}
+.image_7{
+  background-image: url("../img/biotecnologia7.jpg");
+  background-position: center center;
+}
+.overlay_7{
+  position: absolute;
+  transition: all .3s ease;
+  opacity: 0;
+  background-color: #ff6c00;
+}
+.contenedor_7:hover .overlay_7{
+  opacity: .9;
+}
+.overlay_left_7{
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.contenedor_7:hover .overlay_left_7{
+  width: 100%;
+}
+
+/*eventos culturales*/
+.contenedor_8{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  grid-row: 2/4;
+  grid-column: 3/4;
+}
+.image_8{
+  background-image: url("../img/imagencul.JPG");
+  background-position: top center;
+}
+.overlay_8{
+  position: absolute;
+  transition: all .3s ease;
+  opacity: 0;
+  background-color: #ff6c00;
+}
+.contenedor_8:hover .overlay_8{
+  opacity: .9;
+}
+.overlay_left_8{
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.contenedor_8:hover .overlay_left_8{
+  width: 100%;
+}
+
+
+/*agro industria*/
+
+.contenedor_9{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  grid-column: 1/3;
+
+}
+.image_9{
+  background-image: url("../img/tractor.jpg");
+  background-position: top top;
+}
+.overlay_9{
+  position: absolute;
+  transition: all .3s ease;
+  opacity: 0;
+  background-color: #ff6c00;
+}
+.contenedor_9:hover .overlay_9{
+  opacity: .9;
+}
+.overlay_left_9{
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.contenedor_9:hover .overlay_left_9{
+  width: 100%;
+}
+
+/*productos lacteos*/
+.contenedor_10{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  grid-column: 2/3;
+
+}
+.image_10{
+  background-image: url("../img/leche\ por.jpg");
+  background-position: top top;
+}
+.overlay_10{
+  position: absolute;
+  transition: all .3s ease;
+  opacity: 0;
+  background-color: #ff6c00;
+}
+.contenedor_10:hover .overlay_10{
+  opacity: .9;
+}
+.overlay_left_10{
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.contenedor_10:hover .overlay_left_10{
+  width: 100%;
+}
+.textos{
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+} 
+/*cerveza*/
+
+.contenedor_11{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  grid-column: 3/4;
+
+}
+.image_11{
+  background-image: url("../img/cerveza.jpg");
+  background-position: top top;
+}
+.overlay_11{
+  position: absolute;
+  transition: all .3s ease;
+  opacity: 0;
+  background-color: #ff6c00;
+}
+.contenedor_11:hover .overlay_11{
+  opacity: .9;
+}
+.overlay_left_11{
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.contenedor_11:hover .overlay_left_11{
+  width: 100%;
+}
+.texto_u{
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+} 
+/*videos*/
+.contenedor_12{
+  width: 100%;
+  height: 100%;
+  grid-column: 1/2;
+  grid-row: 4/5;
+
+}
+.image_12{
+  background-color: #ff6c00;
+}
+
+.tex{
+  color: white;
+  top: 50%;
+  left: 50%;
+  font-size: 40px;
+  text-decoration: none;
+  text-align: center;
+} 
+
+footer{
+  margin-top: 180px;
+  height: 20vh;
+  background-color: #ff6c00;
+  width: 100%;
+  
+}
+footer a{
+  color: #ffff;
+  font-size: 20px;
+  margin: 20px ;
+}
+footer p{
+  margin-left:1600px ;
+  color: #ffff;
+}
+@media (max-width:768px){
+  .container{
+    margin: 0 20px;
+  }
+  .section1{
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: .2rem;
+    width: 100%;
+
+  }
+  .item1{
+    height: 100px;
+    margin: 0;
+  }
+  .item2{
+    width: 120px;
+    grid-row: 1/3;
+    grid-column: 2/3;
+    height: 240px;
+    margin: 0;
+  }
+  .item2 img{
+    width: 100px;
+    height: 100px;
+  }
+  .item3{
+    height: 100px;
+    margin: 0;
+  }
+  .section_ubicacion{
+    display: none;
+  }
+  .mapa{
+    height: 90%;
+    width: 60%;
+  }
+
+}
