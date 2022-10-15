@@ -1,9 +1,13 @@
-* {
+*{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
-html{
-    box-sizing: border-box;
+
+:root {
+  --colorPrincipal:#87BF4E;
+  --colorSecundario:#397330;
 }
 img {
   max-width: 100%;
@@ -18,15 +22,14 @@ body {
   margin: auto;
   overflow: hidden;
 }
-
 header {
   width: 100%;
   min-height: 100vh;
-  background: #ff6a00cc; /* fallback for old browsers */
-  background-image: linear-gradient(120deg, #ff6a00cc 0%, #fd9f8524 50%),
-    url(../img/header.jpg); /* Chrome 10-25, Safari 5.1-6 */
-  background-image: linear-gradient(120deg, #ff6a00cc 0%, #fd9f8524 50%),
-    url(../img/header.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #87BF4E; 
+  background-image: linear-gradient(120deg, #397330 0%, #fd9f8524 50%),
+    url(../img/header.jpg);
+  background-image: linear-gradient(120deg, #397330 0%, #fd9f8524 50%),
+    url(../img/header.jpg); 
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
@@ -36,7 +39,6 @@ nav {
   text-align: right;
   padding: 30px 50px 0 0;
 }
-
 nav > a {
   display: none;
   color: #ffff;
@@ -47,7 +49,6 @@ nav > a {
 nav > a:hover {
   text-decoration: underline;
 }
-
 @media(min-width: 768px){
   nav > a {
     display: inline-block;
@@ -60,7 +61,6 @@ nav > a:hover {
     text-decoration: underline;
   }
 }
-
 .logo_sena{
   width: 100px;
   margin-left: 20px;
@@ -70,9 +70,8 @@ nav > a:hover {
   height: 430px;
   width: 100%;
   text-align: right;
-  margin-top: 20vh;
+  margin-top: 5vh;
 }
-
 .textos-header h1 {
   font-size: 50px;
   color: #ffff;
@@ -97,9 +96,59 @@ nav > a:hover {
 .container {
   margin: 20px 20px;
 }
+#btn-mas{
+  display: none;
+}
+.container_1{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2;
+}
+.redes a, .btn-mas label{
+  display: block;
+  text-decoration: none;
+  background: var(--colorPrincipal);
+  color: #fff;
+  width: 200px;
+  height: 39px;
+  padding-bottom: 3px;
+  line-height: 55px;
+  text-align: center;
+  box-shadow: 0px 1px 10px rgba(0,0,0,0.4);
+  transition: all 500ms ease;
+}
+.redes a:hover{
+  background: #fff;
+  color: var(--colorPrincipal);
+}
+.redes a{
+  margin-bottom: -15px;
+  opacity: 0;
+  visibility: hidden;
+}
+#btn-mas:checked~ .redes a{
+  margin-bottom: 5px;
+  opacity: 1;
+  visibility: visible;
+}
+.btn-mas label{
+  cursor: pointer;
+  background: var(--colorPrincipal);
+  font-size: 23px;
+}
+#btn-mas:checked ~ .btn-mas label{
+  font-size: 25px;
+}
 .section1 {
   display: flex;
   justify-content: space-around;
+}
+.section1 a{
+  text-decoration: none;
+  font-family: Helvetica, sans-serif;
+  font-size: 1rem;
+  color: var(--colorSecundario);
 }
 .section_item {
   background-color: #ffffff;
@@ -117,13 +166,13 @@ nav > a:hover {
   height: 55vh;
   width: 100%;
   margin-top: 120px;
-  background-color: #ff6c00;
+  background-color: var(--colorSecundario);
 }
 .section_ubicacion {
-  background-image: linear-gradient(120deg, #ff6a00cc 0%, #fd9f8524 50%),
-    url(../IMG/imagen2.jpg); /* Chrome 10-25, Safari 5.1-6 */
-  background-image: linear-gradient(120deg, #ff6a00cc 0%, #fd9f8524 50%),
-    url(../IMG/imagen2.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-image: linear-gradient(120deg, #87BF4E 0%, #fd9f8524 50%),
+    url(../img/imagen2.jpg); /* Chrome 10-25, Safari 5.1-6 */
+  background-image: linear-gradient(120deg, #87BF4E 0%, #fd9f8524 50%),
+    url(../img/imagen2.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-size: cover;
   background-position: center center;
   height: 55vh;
@@ -134,9 +183,7 @@ nav > a:hover {
   width: 45%;
   height: 90%;
 }
-
 /*grid 1*/
-
 .section3 {
   margin-top: 120px;
   display: grid;
@@ -169,7 +216,7 @@ nav > a:hover {
   position: absolute;
   transition: all .2s ease;
   opacity: 0;
-  background-color: #ff6c00;
+  background-color: var(--colorPrincipal);
 }
 .contenedor_1:hover .overlay{
   opacity: .9;
@@ -191,8 +238,6 @@ nav > a:hover {
 .contenedor_1:hover .overlay_left{
   width: 100%;
 }
-
-
 /*apicultura*/
 .contenedor_2{
   position: relative;
@@ -203,13 +248,13 @@ nav > a:hover {
   grid-row: 1/3;
 }
 .image_2{
-  background-image: url("../img/apicultura.jpg");
+  background-image: url("../img/abeja.jpg");
 }
 .overlay_2{
   position: absolute;
   transition: all .3s ease;
   opacity: 0;
-  background-color: #ff6c00;
+  background-color: var(--colorPrincipal);
 }
 .contenedor_2:hover .overlay_2{
   opacity: .9;
@@ -229,7 +274,6 @@ nav > a:hover {
   width: 100%;
   height: 100%;
   display: inline-block;
-  
 }
 .image_3{
   background-image: url("../img/conejos.jpg");
@@ -239,7 +283,7 @@ nav > a:hover {
   position: absolute;
   transition: all .3s ease;
   opacity: 0;
-  background-color: #ff6c00;
+  background-color: var(--colorPrincipal);
 }
 .contenedor_3:hover .overlay_3{
   opacity: .9;
@@ -253,14 +297,12 @@ nav > a:hover {
 .contenedor_3:hover .overlay_left_3{
   width: 100%;
 }
-
 /*gallinas*/
 .contenedor_4{
   position: relative;
   width: 100%;
   height: 100%;
   display: inline-block;
-  
 }
 .image_4{
   background-image: url("../img/gallinas.jpg");
@@ -270,7 +312,7 @@ nav > a:hover {
   position: absolute;
   transition: all .3s ease;
   opacity: 0;
-  background-color: #ff6c00;
+  background-color: var(--colorPrincipal);
 }
 .contenedor_4:hover .overlay_4{
   opacity: .9;
@@ -284,7 +326,6 @@ nav > a:hover {
 .contenedor_4:hover .overlay_left_4{
   width: 100%;
 }
-
 /*ovinocultura*/
 .contenedor_item5{
   position: relative;
@@ -292,7 +333,6 @@ nav > a:hover {
   height: 100%;
   display: inline-block;
   grid-column: 1/4;
-  
 }
 .texto{
   color: white;
@@ -302,7 +342,6 @@ nav > a:hover {
   transform: translate(-50%, -50%);
   font-size: 40px;
 } 
-
 .image_item5{
   background-image: url("../img/cabra.jpg");
   background-position: top top;
@@ -311,7 +350,7 @@ nav > a:hover {
   position: absolute;
   transition: all .3s ease;
   opacity: 0;
-  background-color: #ff6c00;
+  background-color: var(--colorPrincipal);
 }
 .contenedor_item5:hover .overlay_item5{
   opacity: .9;
@@ -325,18 +364,15 @@ nav > a:hover {
 .contenedor_item5:hover .overlay_left_item5{
   width: 100%;
 }
-
-
-
 /*grid 2*/
 .section4 {
   margin-top: -100px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4,1fr);
+  grid-template-rows: repeat(3,1fr);
   grid-column-gap: 15px;
   grid-row-gap: 15px;
-  height: 140vh;
+  height: 120vh;
 }
 .item {
   background-size: cover;
@@ -362,7 +398,7 @@ nav > a:hover {
   position: absolute;
   transition: all .3s ease;
   opacity: 0;
-  background-color: #ff6c00;
+  background-color: var(--colorPrincipal);
 }
 .contenedor_5:hover .overlay_5{
   opacity: .9;
@@ -376,7 +412,6 @@ nav > a:hover {
 .contenedor_5:hover .overlay_left_5{
   width: 100%;
 }
-
 /*reposteria*/
 .contenedor_6{
   position: relative;
@@ -394,7 +429,7 @@ nav > a:hover {
   position: absolute;
   transition: all .3s ease;
   opacity: 0;
-  background-color: #ff6c00;
+  background-color: var(--colorPrincipal);
 }
 .contenedor_6:hover .overlay_6{
   opacity: .9;
@@ -408,38 +443,36 @@ nav > a:hover {
 .contenedor_6:hover .overlay_left_6{
   width: 100%;
 }
-
 /*biotecnologia*/
-.contenedor_7{
+.contenedor_13{
   position: relative;
   width: 100%;
   height: 100%;
   display: inline-block;
-  
+  grid-column: 1/2;
 }
-.image_7{
+.image_13{
   background-image: url("../img/biotecnologia7.jpg");
   background-position: center center;
 }
-.overlay_7{
+.overlay_13{
   position: absolute;
   transition: all .3s ease;
   opacity: 0;
-  background-color: #ff6c00;
+  background-color: var(--colorPrincipal);
 }
-.contenedor_7:hover .overlay_7{
+.contenedor_13:hover .overlay_13{
   opacity: .9;
 }
-.overlay_left_7{
+.overlay_left_13{
   height: 100%;
   width: 100%;
   top: 0;
   left: 0;
 }
-.contenedor_7:hover .overlay_left_7{
+.contenedor_13:hover .overlay_left_13{
   width: 100%;
 }
-
 /*eventos culturales*/
 .contenedor_8{
   position: relative;
@@ -457,7 +490,7 @@ nav > a:hover {
   position: absolute;
   transition: all .3s ease;
   opacity: 0;
-  background-color: #ff6c00;
+  background-color: var(--colorPrincipal);
 }
 .contenedor_8:hover .overlay_8{
   opacity: .9;
@@ -471,41 +504,37 @@ nav > a:hover {
 .contenedor_8:hover .overlay_left_8{
   width: 100%;
 }
-
-
 /*agro industria*/
-
-.contenedor_9{
+.contenedor_14{
   position: relative;
   width: 100%;
   height: 100%;
   display: inline-block;
-  grid-column: 1/3;
+  grid-column: 2/3;
 
 }
-.image_9{
+.image_14{
   background-image: url("../img/tractor.jpg");
   background-position: top top;
 }
-.overlay_9{
+.overlay_14{
   position: absolute;
   transition: all .3s ease;
   opacity: 0;
-  background-color: #ff6c00;
+  background-color: var(--colorPrincipal);
 }
-.contenedor_9:hover .overlay_9{
+.contenedor_14:hover .overlay_14{
   opacity: .9;
 }
-.overlay_left_9{
+.overlay_left_14{
   height: 100%;
   width: 100%;
   top: 0;
   left: 0;
 }
-.contenedor_9:hover .overlay_left_9{
+.contenedor_14:hover .overlay_left_14{
   width: 100%;
 }
-
 /*productos lacteos*/
 .contenedor_10{
   position: relative;
@@ -513,7 +542,6 @@ nav > a:hover {
   height: 100%;
   display: inline-block;
   grid-column: 2/3;
-
 }
 .image_10{
   background-image: url("../img/leche\ por.jpg");
@@ -523,7 +551,7 @@ nav > a:hover {
   position: absolute;
   transition: all .3s ease;
   opacity: 0;
-  background-color: #ff6c00;
+  background-color: var(--colorPrincipal);
 }
 .contenedor_10:hover .overlay_10{
   opacity: .9;
@@ -546,24 +574,22 @@ nav > a:hover {
   font-size: 40px;
 } 
 /*cerveza*/
-
 .contenedor_11{
   position: relative;
   width: 100%;
   height: 100%;
   display: inline-block;
-  grid-column: 3/4;
-
+  grid-column: 1/3;
 }
 .image_11{
   background-image: url("../img/cerveza.jpg");
-  background-position: top top;
+  background-position: center center;
 }
 .overlay_11{
   position: absolute;
   transition: all .3s ease;
   opacity: 0;
-  background-color: #ff6c00;
+  background-color: var(--colorPrincipal);
 }
 .contenedor_11:hover .overlay_11{
   opacity: .9;
@@ -590,13 +616,11 @@ nav > a:hover {
   width: 100%;
   height: 100%;
   grid-column: 1/2;
-  grid-row: 4/5;
-
+  grid-row: 3/4;
 }
 .image_12{
-  background-color: #ff6c00;
+  background-color: var(--colorPrincipal);
 }
-
 .tex{
   color: white;
   top: 50%;
@@ -605,24 +629,68 @@ nav > a:hover {
   text-decoration: none;
   text-align: center;
 } 
-
+.section6{
+  margin-top: 160px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-column-gap: 15px;
+  height: 40vh;
+}
 footer{
-  margin-top: 180px;
-  height: 20vh;
-  background-color: #ff6c00;
+  margin-top: 200px;
   width: 100%;
-  
+  min-height: 80vh;
+  background: #87BF4E; 
+  background-image: linear-gradient(120deg, #397330 0%, #fd9f8524 50%),
+  url(../img/ideafooter.jpg); /* Chrome 10-25, Safari 5.1-6 */
+  background-image: linear-gradient(120deg, #397330 0%, #fd9f8524 50%),
+  url(../img/ideafooter.jpg); 
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  position: relative;
 }
-footer a{
-  color: #ffff;
-  font-size: 20px;
-  margin: 20px ;
+.footer{
+  position: absolute;
+  top: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  left: 80px;
 }
-footer p{
-  margin-left:1600px ;
-  color: #ffff;
+.footer a{
+  text-decoration: none;
 }
-@media (max-width:768px){
+footer h4{
+  color: #ffffff;
+  font-size: 40px;
+}
+.footer_enlace1{
+  border: 10px solid var(--colorPrincipal);
+  padding: 20px;
+  width: 350px;
+  height: 90px;
+  font-size: 30px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.footer_enlace2{
+  text-align: center;
+  width: 300px;
+  height: 80px;
+}
+.footer a{
+  font-size: 60px;
+  color: #ffffff;
+}
+.wave2 {
+  position: absolute;
+  top: -100px;
+  bottom: 100%;
+  width: 100%;
+}
+@media (max-width:900px){
   .container{
     margin: 0 20px;
   }
@@ -632,33 +700,67 @@ footer p{
     grid-template-columns: repeat(2,1fr);
     gap: .2rem;
     width: 100%;
-
   }
   .item1{
     height: 100px;
     margin: 0;
+    width: 80%;
   }
   .item2{
-    width: 120px;
+    width: 80%;
     grid-row: 1/3;
     grid-column: 2/3;
     height: 240px;
     margin: 0;
   }
   .item2 img{
-    width: 100px;
-    height: 100px;
+    width: 90%;
+    height: 60%;
   }
   .item3{
     height: 100px;
     margin: 0;
+    width: 80%;
   }
   .section_ubicacion{
     display: none;
   }
   .mapa{
     height: 90%;
-    width: 60%;
+    width: 90%;
+  }
+  /*grid 1*/
+  .contenedor_1{
+    grid-column: 1/4;
+    grid-row: 1/2;
+  }
+  .contenedor_2{
+    grid-column: 3/4;
+    grid-row: 2/3;
   }
 
+  /*grid 2*/
+  .contenedor_6{
+    grid-column: 1/4;
+  }
+  .contenedor_5{
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .contenedor_8{
+    grid-row: 2/3;
+  }
+  .contenedor_11{
+    grid-column: 1/4;
+    grid-row: 3/4;
+  }
+  .text{
+    font-size: 1.5rem;
+  }
+  .footer{
+    margin: 0;
+    left: 10px;
+  }
+  
+  
 }
